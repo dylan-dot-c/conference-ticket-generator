@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./assets/images/logo-full.svg" alt="Coding Conf logo" />
+
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </header>
+
+      <form>
+        <div>
+          <label for="avatar">Upload Avatar</label>
+          <input type="file" name="avatar" id="avatar" class="avatar--input" />
+          <div id="image-drop">
+            <label class="drop--label" for="avatar">
+              <img src="./assets/images/icon-upload.svg" alt="" />
+              <p>Drag and Drop or click to upload</p>
+            </label>
+          </div>
+          <p class="info--text">
+            <img src="./assets/images/icon-info.svg" alt="icon-info" /> Upload
+            your photo (JPG or PNG, max size: 500KB).
+          </p>
+        </div>
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label for="">Email</label>
+          <input type="email" placeholder="example@email.com" />
+        </div>
+        <div>
+          <label for="github">GitHub Username</label>
+          <input
+            type="text"
+            name="github"
+            id="github"
+            placeholder="yourusername"
+          />
+        </div>
+        <button type="submit">Generate My Ticket</button>
+      </form>
+    </main>
+    <script src="script.js"></script>
+    <!-- 
+
+    Secure your spot at next year's biggest coding conference. Upload Avatar
+    Drag and drop or click to upload Upload your photo (JPG or PNG, max size:
+    500KB). Full Name Email Address example@email.com GitHub Username
+    @yourusername Generate My Ticket
+
+
+    Congrats,
+    ! Your ticket is ready. We've emailed your ticket to
+    
+    and will send updates in the run up to the event. Coding Conf Jan 31, 2025 /
+    Austin, TX -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

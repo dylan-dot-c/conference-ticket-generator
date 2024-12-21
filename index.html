@@ -26,25 +26,45 @@
       <form>
         <div>
           <label for="avatar">Upload Avatar</label>
-          <input type="file" name="avatar" id="avatar" class="avatar--input" />
-          <div id="image-drop">
+          <div id="image-drop" dropzone="link">
+            <input
+              type="file"
+              name="avatar"
+              id="avatar"
+              class="avatar--input sr-only"
+            />
             <label class="drop--label" for="avatar">
-              <img src="./assets/images/icon-upload.svg" alt="" />
-              <p>Drag and Drop or click to upload</p>
+              <div class="preview--container">
+                <img
+                  src="./assets/images/icon-upload.svg"
+                  alt=""
+                  id="imagePreview"
+                />
+              </div>
+              <p id="dragLabel">Drag and Drop or click to upload</p>
+              <div class="active--image--btns">
+                <button id="btnRemove" type="button">Remove Image</button>
+                <button id="btnChange" type="button">Change Image</button>
+              </div>
             </label>
           </div>
           <p class="info--text">
-            <img src="./assets/images/icon-info.svg" alt="icon-info" /> Upload
-            your photo (JPG or PNG, max size: 500KB).
+            <img
+              src="./assets/images/icon-info.svg"
+              width="30"
+              height="30"
+              alt="icon-info"
+            />
+            Upload your photo (JPG or PNG, max size: 500KB).
           </p>
         </div>
         <div>
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" />
+          <input type="text" id="name" name="name" placeholder="Jake Paul" />
         </div>
         <div>
-          <label for="">Email</label>
-          <input type="email" placeholder="example@email.com" />
+          <label for="email">Email</label>
+          <input type="email" placeholder="example@email.com" name="email" />
         </div>
         <div>
           <label for="github">GitHub Username</label>

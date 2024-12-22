@@ -6,6 +6,8 @@ const imageDrop = document.getElementById("image-drop");
 const form = document.querySelector("form");
 const events = ["dragenter", "dragover", "dragleave", "drop"];
 let btnChange, btnRemove;
+const infoText = document.getElementById("info--text");
+const infoWrapper = document.getElementById("image--upload--label");
 
 events.forEach((eventName) => {
   imageDrop.addEventListener(eventName, preventDefaults, false);
@@ -47,7 +49,33 @@ function createPreview(file) {
 }
 
 form.addEventListener("submit", (e) => {
+  const reader = new FileReader();
+  let data = new FormData(form);
   // e.preventDefault();
+  console.log(data, data.name);
+  for (const [key, value] of data) {
+    console.log(`${key}: ${value}\n`);
+  }
+  let file = avatarInput.files[0];
+
+  console.log(file);
+  if (file.type !== "image/png" && file.type !== "image/jpg") {
+    infoWrapper.classList.add("error");
+
+    infoText.textContent =
+      "File is of the incorrect type. Please upload .png or .jpg files.";
+  } else if (file.size > 512000) {
+    infoWrapper.classList.add("error");
+    infoText.textContent = "File too large. Please upload a photo under 500KB.";
+  } else {
+    infoWrapper.classList.remove("error");
+    infoText.textContent = "Upload your photo (JPG or PNG, max size: 500KB).";
+  }
+  reader.onload = function (event) {
+    console.log(event.target);
+    localStorage.setItem("uploadedAvatar", event.target.result);
+  };
+  reader.readAsDataURL(file);
 });
 
 avatarInput.addEventListener("change", (e) => {

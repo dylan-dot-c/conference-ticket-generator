@@ -1,16 +1,6 @@
+@import "ticket.scss";
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
-
-$neutral-0: hsl(0, 0%, 100%);
-$neutral-300: hsl(252, 6%, 83%);
-$neutral-500: hsl(245, 15%, 58%);
-$neutral-700: hsl(245, 19%, 35%);
-$neutral-900: hsl(248, 70%, 10%);
-$orange-500: hsl(7, 88%, 67%);
-$orange-700: hsl(7, 71%, 60%);
-$text-gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
-$transparent-white: rgba(255, 255, 255, 0.08);
-$inconsolata: "Inconsolata", serif;
-
+@import "variables";
 *,
 *::before,
 *::after {
@@ -81,12 +71,22 @@ header {
   }
 }
 
-.info--text {
+.info--wrapper {
   font-size: 12px;
   display: flex;
   gap: 0.5rem;
   align-items: center;
   letter-spacing: -0.2px;
+}
+
+.error {
+  #info--text {
+    color: $orange-700;
+  }
+
+  .error--red {
+    stroke: $orange-700;
+  }
 }
 
 form {
@@ -109,11 +109,45 @@ input {
   border-radius: 0.5rem;
   padding: 1rem;
   border: 1px solid $neutral-300;
+  color: $neutral-0;
 
   &::placeholder {
     color: $neutral-300;
     font-family: $inconsolata;
   }
+}
+
+.info--wrapper {
+  display: none;
+}
+
+#image--upload--label {
+  display: flex;
+}
+
+input:user-invalid {
+  border: 1px solid $orange-700;
+
+  & + .info--wrapper {
+    display: flex;
+    #info--text {
+      color: $orange-700;
+    }
+
+    .error--red {
+      stroke: $orange-700;
+    }
+  }
+
+  & + .error--text {
+    display: block;
+  }
+}
+
+.error--text {
+  margin-top: 0.5rem;
+  color: $orange-700;
+  display: none;
 }
 
 button {

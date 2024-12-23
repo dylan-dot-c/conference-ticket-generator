@@ -1,66 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ticket HTML CODE</title>
-        <link rel="stylesheet" href="./assets/style.css" />
-    </head>
-    <body>
-        <header>
-            <img src="./assets/images/logo-full.svg" alt="Coding Conf logo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <h1>
-                Congrats,
-                <span id="fullname" class="attendant--name"
-                    >Jonatan Kristof</span
-                >! Your ticket is ready.
-            </h1>
-            <p class="details">
-                We've emailed your ticket to
-                <span class="email" id="attendant--email"
-                    >jonatan@email.com</span
-                >
-                and will send updates in the run up to the event.
-            </p>
-        </header>
-        <main>
-            <div class="ticket--wrapper">
-                <section>
-                    <div class="ticket--header">
-                        <img
-                            class="ticket--logo"
-                            src="./assets/images/logo-mark.svg"
-                            alt="" />
-                        <h2>Coding Conf</h2>
-                    </div>
-                    <p class="ticket--date">Jan 31, 2025 / Austin, TX</p>
-                </section>
+    <!-- Description Meta Tag -->
+    <meta
+      name="description"
+      content="This is a solution to the Conference ticket generator challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects."
+    />
 
-                <section class="ticket--footer">
-                    <div>
-                        <img
-                            class="ticket--avatar"
-                            id="ticketAvatar"
-                            src="./assets/images//image-avatar.jpg"
-                            alt="" />
-                    </div>
-                    <div class="ticket--avatar--details">
-                        <h2 id="ticketName">Jonathan Kristof</h2>
-                        <div>
-                            <img
-                                class="github--logo"
-                                width="16"
-                                height="16"
-                                src="./assets/images/icon-github.svg"
-                                alt="" />
-                            <span id="githubUsername">@jonatankristof0101</span>
-                        </div>
-                    </div>
-                </section>
-                <span class="ticket--id">#12021</span>
+    <!-- Keywords Meta Tag -->
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Scss, ticket, generator"
+    />
+
+    <!-- Author Meta Tag -->
+    <meta name="author" content="Dylan Heslop" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Responsive Ticket Generator" />
+    <meta
+      property="og:description"
+      content="Simple ticket generator, where a user can upload an image(avatar) and inputsome personal inforamtion and see a ticket gets generated for them. Challenge by frontend mentor"
+    />
+    <meta
+      property="og:image"
+      content="https://ticket-generator-fem.netlify.app/screenshot.png"
+    />
+    <meta
+      property="og:url"
+      content="https://ticket-generator-fem.netlify.app/"
+    />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta
+      name="twitter:card"
+      content="Simple ticket generator, where a user can upload an image(avatar) and inputsome personal inforamtion and see a ticket gets generated for them. Challenge by frontend mentor"
+    />
+    <meta name="twitter:title" content="Responsive Ticket Generator" />
+    <meta
+      name="twitter:description"
+      content="Simple ticket generator, where a user can upload an image(avatar) and inputsome personal inforamtion and see a ticket gets generated for them. Challenge by frontend mentor"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ticket-generator-fem.netlify.app/screenshot.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Conference ticket Result</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/images/logo-full.svg" alt="Coding Conf logo" />
+
+      <h1>
+        Congrats,
+        <span id="fullname" class="attendant--name">Jonatan Kristof</span>! Your
+        ticket is ready.
+      </h1>
+      <p class="details">
+        We've emailed your ticket to
+        <span class="email" id="attendant--email">jonatan@email.com</span>
+        and will send updates in the run up to the event.
+      </p>
+    </header>
+    <main>
+      <div class="ticket--wrapper">
+        <section>
+          <div class="ticket--header">
+            <img
+              class="ticket--logo"
+              src="./assets/images/logo-mark.svg"
+              alt=""
+            />
+            <h2>Coding Conf</h2>
+          </div>
+          <p class="ticket--date">Jan 31, 2025 / Austin, TX</p>
+        </section>
+
+        <section class="ticket--footer">
+          <div>
+            <img
+              class="ticket--avatar"
+              id="ticketAvatar"
+              src="./assets/images//image-avatar.jpg"
+              alt=""
+            />
+          </div>
+          <div class="ticket--avatar--details">
+            <h2 id="ticketName">Jonathan Kristof</h2>
+            <div>
+              <img
+                class="github--logo"
+                width="16"
+                height="16"
+                src="./assets/images/icon-github.svg"
+                alt=""
+              />
+              <span id="githubUsername">@jonatankristof0101</span>
             </div>
-        </main>
-        <script src="./ticket.js"></script>
-    </body>
+          </div>
+        </section>
+        <span class="ticket--id">#12021</span>
+      </div>
+    </main>
+    <script src="./scripts/ticket.js"></script>
+  </body>
 </html>

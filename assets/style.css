@@ -215,6 +215,9 @@ header p {
   font-size: 18px;
   letter-spacing: 0;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
 }
 
 .info--wrapper {
@@ -225,6 +228,7 @@ header p {
   letter-spacing: -0.2px;
 }
 
+.error .info--text,
 .error #info--text {
   color: hsl(7, 71%, 60%);
 }
@@ -286,7 +290,7 @@ input:user-invalid {
 input:user-invalid + .info--wrapper {
   display: flex;
 }
-input:user-invalid + .info--wrapper #info--text {
+input:user-invalid + .info--wrapper .info--text {
   color: hsl(7, 71%, 60%);
 }
 input:user-invalid + .info--wrapper .error--red {
@@ -385,7 +389,8 @@ button:hover {
   text-align: center;
   font-size: 12px;
   color: hsl(252, 6%, 83%);
-  margin-top: 2rem;
+  top: 2rem;
+  position: relative;
 }
 .attribution a:visited,
 .attribution a {
@@ -395,9 +400,9 @@ button:hover {
 @media screen and (min-width: 1024px) {
   body {
     padding: 2.5rem 2rem;
-    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom.svg"), url("./images/background-desktop.png");
+    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom-desktop.svg"), url("./images/background-desktop.png");
     background-repeat: no-repeat;
-    background-position: 0, 44px -85px, 938px 50%, 100% 88px, bottom left;
+    background-position: 0, 44px -85px, 938px 50%, 100% 88px, bottom left, 0;
     background-size: cover, 217px, 217px, 446px, 825px, cover;
     padding-bottom: 114px;
     color: white;
@@ -407,6 +412,10 @@ button:hover {
     max-width: 891px;
     margin: auto;
     margin-bottom: 3.5rem;
+  }
+  header p {
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
   form {
     max-width: 460px;

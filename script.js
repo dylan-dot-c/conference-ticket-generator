@@ -23,11 +23,23 @@ function preventDefaults(e) {
 imageDrop.addEventListener("drop", handleDrop, false);
 
 function handleDrop(e) {
+    console.log("DROPPER");
     const dt = e.dataTransfer;
     const files = dt.files;
-    // avatarInput.files = files;
-    console.log(files);
-    handleFiles(files);
+
+    if (files && files.length > 0) {
+        console.log(files);
+        handleFiles(files);
+
+        // Create a new DataTransfer to set the files on the input
+        const dataTransfer = new DataTransfer();
+        for (let file of files) {
+            dataTransfer.items.add(file);
+        }
+        avatarInput.files = dataTransfer.files;
+    } else {
+        console.error("Dropped items are not files.");
+    }
 }
 
 function handleFiles(files) {

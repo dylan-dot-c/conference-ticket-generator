@@ -381,10 +381,21 @@ button:hover {
     margin: auto;
   }
 }
+.attribution {
+  text-align: center;
+  font-size: 12px;
+  color: hsl(252, 6%, 83%);
+  margin-top: 2rem;
+}
+.attribution a:visited,
+.attribution a {
+  color: hsl(7, 88%, 67%);
+}
+
 @media screen and (min-width: 1024px) {
   body {
     padding: 2.5rem 2rem;
-    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom.svg"), url("./images/background-mobile.png");
+    background: url("./images/pattern-lines.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-circle.svg"), url("./images/pattern-squiggly-line-top.svg"), url("./images/pattern-squiggly-line-bottom.svg"), url("./images/background-desktop.png");
     background-repeat: no-repeat;
     background-position: 0, 44px -85px, 938px 50%, 100% 88px, bottom left;
     background-size: cover, 217px, 217px, 446px, 825px, cover;

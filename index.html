@@ -1,201 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-        <title>Frontend Mentor | Conference ticket generator</title>
-        <link rel="stylesheet" href="./assets/style.css" />
-    </head>
-    <body>
-        <main>
-            <header>
+    <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="./assets/images/logo-full.svg" alt="Coding Conf logo" />
+
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at next year's biggest coding conference.</p>
+      </header>
+
+      <form action="./ticket.html">
+        <div>
+          <label for="avatar">Upload Avatar</label>
+          <div id="image-drop" dropzone="link">
+            <input
+              type="file"
+              name="avatar"
+              id="avatar"
+              class="avatar--input sr-only"
+              required
+            />
+            <label class="drop--label" for="avatar">
+              <div class="preview--container">
                 <img
-                    src="./assets/images/logo-full.svg"
-                    alt="Coding Conf logo" />
-
-                <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-                <p>
-                    Secure your spot at next year's biggest coding conference.
-                </p>
-            </header>
-
-            <form action="./ticket.html">
-                <div>
-                    <label for="avatar">Upload Avatar</label>
-                    <div id="image-drop" dropzone="link">
-                        <input
-                            type="file"
-                            name="avatar"
-                            id="avatar"
-                            class="avatar--input sr-only"
-                            required />
-                        <label class="drop--label" for="avatar">
-                            <div class="preview--container">
-                                <img
-                                    src="./assets/images/icon-upload.svg"
-                                    alt=""
-                                    id="imagePreview" />
-                            </div>
-                            <p id="dragLabel">
-                                Drag and Drop or click to upload
-                            </p>
-                            <div class="active--image--btns">
-                                <button id="btnRemove" type="button">
-                                    Remove Image
-                                </button>
-                                <button id="btnChange" type="button">
-                                    Change Image
-                                </button>
-                            </div>
-                        </label>
-                    </div>
-                    <div id="image--upload--label" class="info--wrapper">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="none"
-                            viewBox="0 0 16 16">
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                            <path
-                                class="error--red"
-                                fill="#D1D0D5"
-                                d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.004 10.462V7.596M8 5.569v-.042" />
-                        </svg>
-                        <p id="info--text">
-                            Upload your photo (JPG or PNG, max size: 500KB).
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <label for="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Jake Paul"
-                        required />
-                    <div class="info--wrapper">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="none"
-                            viewBox="0 0 16 16">
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                            <path
-                                class="error--red"
-                                fill="#D1D0D5"
-                                d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.004 10.462V7.596M8 5.569v-.042" />
-                        </svg>
-                        <p id="info--text">Please enter a valid full name.</p>
-                    </div>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input
-                        type="email"
-                        placeholder="example@email.com"
-                        name="email"
-                        required />
-                    <div class="info--wrapper">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="none"
-                            viewBox="0 0 16 16">
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                            <path
-                                class="error--red"
-                                fill="#D1D0D5"
-                                d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.004 10.462V7.596M8 5.569v-.042" />
-                        </svg>
-                        <p id="info--text">
-                            Please enter a valid email address.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <label for="github">GitHub Username</label>
-                    <input
-                        type="text"
-                        name="github"
-                        id="github"
-                        placeholder="@yourusername"
-                        required />
-                    <div class="info--wrapper">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            fill="none"
-                            viewBox="0 0 16 16">
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z" />
-                            <path
-                                class="error--red"
-                                fill="#D1D0D5"
-                                d="M8.004 10.462V7.596ZM8 5.57v-.042Z" />
-                            <path
-                                class="error--red"
-                                stroke="#D1D0D5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M8.004 10.462V7.596M8 5.569v-.042" />
-                        </svg>
-                        <p id="info--text">
-                            Please enter a valid GitHub username
-                        </p>
-                    </div>
-                </div>
-                <button type="submit">Generate My Ticket</button>
-            </form>
-        </main>
-        <script src="script.js"></script>
-    </body>
+                  src="./assets/images/icon-upload.svg"
+                  alt="image preview goes here"
+                  id="imagePreview"
+                />
+              </div>
+              <p id="dragLabel">Drag and Drop or click to upload</p>
+              <div class="active--image--btns">
+                <button id="btnRemove" type="button">Remove Image</button>
+                <button id="btnChange" type="button">Change Image</button>
+              </div>
+            </label>
+          </div>
+          <div id="image--upload--label" class="info--wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+              />
+              <path
+                class="error--red"
+                fill="#D1D0D5"
+                d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+              />
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042"
+              />
+            </svg>
+            <p id="info--text">
+              Upload your photo (JPG or PNG, max size: 500KB).
+            </p>
+          </div>
+        </div>
+        <div>
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Jake Paul"
+            required
+          />
+          <div class="info--wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+              />
+              <path
+                class="error--red"
+                fill="#D1D0D5"
+                d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+              />
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042"
+              />
+            </svg>
+            <p id="info--text">Please enter a valid full name.</p>
+          </div>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="example@email.com"
+            name="email"
+            required
+          />
+          <div class="info--wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+              />
+              <path
+                class="error--red"
+                fill="#D1D0D5"
+                d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+              />
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042"
+              />
+            </svg>
+            <p id="info--text">Please enter a valid email address.</p>
+          </div>
+        </div>
+        <div>
+          <label for="github">GitHub Username</label>
+          <input
+            type="text"
+            name="github"
+            id="github"
+            placeholder="@yourusername"
+            required
+          />
+          <div class="info--wrapper">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              viewBox="0 0 16 16"
+            >
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"
+              />
+              <path
+                class="error--red"
+                fill="#D1D0D5"
+                d="M8.004 10.462V7.596ZM8 5.57v-.042Z"
+              />
+              <path
+                class="error--red"
+                stroke="#D1D0D5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.004 10.462V7.596M8 5.569v-.042"
+              />
+            </svg>
+            <p id="info--text">Please enter a valid GitHub username</p>
+          </div>
+        </div>
+        <button type="submit">Generate My Ticket</button>
+      </form>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="https://github.com/dylan-dot-c">Dylan Heslop</a>.
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
